@@ -1,0 +1,127 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    tools:context="com.tohami.egyptinnovate.ui.navigation.NavigationDrawerFragment">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/drawer_news"
+            android:layout_width="@dimen/drawer_icon_size"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_marginBottom="@dimen/margin_mid"
+            android:orientation="vertical" >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/drawer_news_icon" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                style="@style/drawerTextStyle"
+                android:text="@string/drawer_news"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/drawer_map"
+            android:layout_width="@dimen/drawer_icon_size"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/margin_mid"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/drawer_map_icon" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                style="@style/drawerTextStyle"
+                android:text="@string/drawer_map"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/drawer_events"
+            android:layout_width="@dimen/drawer_icon_size"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/margin_mid"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/drawer_events_icon" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                style="@style/drawerTextStyle"
+                android:text="@string/drawer_events"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/drawer_leadership"
+            android:layout_width="@dimen/drawer_icon_size"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_marginBottom="@dimen/margin_mid"
+            android:orientation="vertical" >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/drawer_leadership_icon" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                style="@style/drawerTextStyle"
+                android:text="@string/drawer_leadership" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/drawer_language"
+            android:layout_width="@dimen/drawer_icon_size"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:orientation="vertical" >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:adjustViewBounds="true"
+                android:layout_gravity="center"
+                android:src="@drawable/drawer_lang_icon" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                style="@style/drawerTextStyle"
+                android:text="@string/drawer_language" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

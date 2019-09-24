@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/news_list_bg">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/news_details_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layoutAnimation="@anim/partial_in_from_left_animation">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/row_item_margin_horizontal"
+                app:cardCornerRadius="@dimen/news_list_item_corner_redius">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="400dp"
+                    android:orientation="vertical"
+                    tools:ignore="UnusedAttribute">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_news_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/back_drop_height"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/details_placeholder"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/margin_mid"
+                        android:paddingBottom="@dimen/margin_mid"
+                        android:background="@color/colorPrimary">
+
+                        <TextView
+                            android:id="@+id/tv_news_date"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:paddingTop="@dimen/margin_small"
+                            android:paddingBottom="@dimen/margin_small"
+                            android:textAlignment="center"
+                            tools:text="14 oct, 2018" />
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"/>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:paddingTop="@dimen/margin_small"
+                            android:paddingBottom="@dimen/margin_small"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+                            <ImageView
+                                android:id="@+id/iv_like"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_like"
+                                android:layout_marginEnd="@dimen/margin_small"
+                                android:tint="@color/darkGold"/>
+                            <TextView
+                                android:id="@+id/tv_news_likes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/darkGold"
+                                android:text="Likes (754)"
+                                />
+                        </LinearLayout>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"/>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:paddingTop="@dimen/margin_small"
+                            android:paddingBottom="@dimen/margin_small"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center"
+                            android:gravity="center">
+                            <ImageView
+                                android:id="@+id/iv_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_view"
+                                android:layout_marginEnd="@dimen/margin_small"/>
+                            <TextView
+                                android:id="@+id/tv_news_views"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:textAlignment="center"
+                                android:text="8 Views"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_news_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="10"
+                        android:padding="@dimen/margin_mid"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="@dimen/mid_text_size"
+                        tools:ignore="UnusedAttribute"
+                        tools:text="fsdfsdfsdfsdfsdfsdf" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <FrameLayout
+                android:id="@+id/rnFragmentContainer"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+            </FrameLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/msg_container"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/news_list_image_size"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_margin="@dimen/margin_large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/tv_msg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/mid_text_size"
+            android:padding="@dimen/margin_mid"
+            android:textAlignment="center"/>
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_gravity="top"
+        android:id="@+id/progress_layout"
+        android:indeterminate="true"
+        />
+</FrameLayout>
+

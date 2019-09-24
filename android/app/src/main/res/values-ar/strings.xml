@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">الاخبار</string>
+
+    <string name="somethingWrong">نأسف حدث خطأما</string>
+    <string name="noInternet">لا يوجد اتصال بالانترنت, تحقق من اتصالك بالانترنت واعد المحاوله</string>
+
+    <string name="likes">اعجاب(%s)</string>
+    <string name="views">%s مشاهدة</string>
+    <string name="filter">تنقية</string>
+    <string name="share">مشاركة</string>
+
+    <string name="drawer_news">الاخبار</string>
+    <string name="drawer_events">التقويم</string>
+    <string name="drawer_map">الخريطة</string>
+    <string name="drawer_leadership">أفكار القيادة</string>
+    <string name="drawer_language">تغيير اللغة</string>
+    <string name="envents_clicked">Events item clicked</string>
+    <string name="news_clicked">News item clicked</string>
+    <string name="leadership_clicked">Leadership item clicked</string>
+    <string name="maps_clicked">Map item clicked</string>
+    <string name="share_article_chooser_header">Share Article</string>
+    <string name="filter_clicked">Filter clicked</string>
+
+</resources>

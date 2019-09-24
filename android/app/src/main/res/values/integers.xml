@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="fastAnimDuration">300</integer>
+    <integer name="slowAnimDuration">500</integer>
+    <integer name="imageScaleX">1</integer>
+</resources>

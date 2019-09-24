@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/fragmentNewsList">
+
+    <fragment
+        android:id="@+id/fragmentNewsList"
+        android:name="com.tohami.egyptinnovate.ui.news.list.view.NewsListFragment"
+        android:label="fragment_news_list"
+        tools:layout="@layout/fragment_news_list">
+        <action
+            android:id="@+id/action_fragmentNewsList_to_fragmentNewsDetails"
+            app:destination="@id/fragmentNewsDetails"
+            app:enterAnim="@anim/in_from_right"
+            app:exitAnim="@anim/out_to_left"
+            app:popEnterAnim="@anim/in_from_left"
+            app:popExitAnim="@anim/out_to_right" />
+        <action
+            android:id="@+id/action_fragmentNewsList_to_RNHelloFragment"
+            app:destination="@id/RNHelloFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentNewsDetails"
+        android:name="com.tohami.egyptinnovate.ui.news.details.view.NewsDetailsFragment"
+        android:label="fragment_news_details"
+        tools:layout="@layout/fragment_news_details" />
+    <fragment
+        android:id="@+id/RNHelloFragment"
+        android:name="com.tohami.egyptinnovate.ui.react.RNHelloFragment"
+        android:label="RNHelloFragment" />
+</navigation>
